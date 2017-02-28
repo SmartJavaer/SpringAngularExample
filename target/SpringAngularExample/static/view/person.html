@@ -1,0 +1,50 @@
+<table class="table table-striped">
+    <tr>
+        <th ng-click="orderBy('username')">
+            <msg key="username"></msg>
+            <i ng-class="orderIcon('username')"></i></th>
+        <th ng-click="orderBy('address')">
+            <msg key="address"></msg>
+            <i ng-class="orderIcon('address')"></i></th>
+        <th ng-click="orderBy('email')">
+            <msg key="email"></msg>
+            <i ng-class="orderIcon('email')"></i></th>
+        <th>
+            <msg key="delete"></msg>
+        </th>
+    </tr>
+    <tr ng-repeat="person in persons|orderBy:order">
+        <td>{{person.username}}</td>
+        <td>{{person.address}}</td>
+        <td>{{person.email}}</td>
+        <td><a ng-click="delete(person)"><i class="icon-trash"></i></a></td>
+    </tr>
+</table>
+
+<form>
+    <fieldset>
+        <legend>
+            <msg key="newPerson"></msg>
+        </legend>
+        <input type="hidden" ng-model="person.id" />
+        <label>
+            <msg key="username"></msg>
+        </label>
+        <input type="text" ng-model="person.username"/>
+
+        <label>
+            <msg key="address"></msg>
+        </label>
+        <input type="text" ng-model="person.address"/>
+
+        <label>
+            <msg key="email"></msg>
+        </label>
+        <input type="text" ng-model="person.email"/>
+
+        <label></label>
+        <button type="submit" class="btn" ng-click="save()">
+            <msg key="save"></msg>
+        </button>
+    </fieldset>
+</form>
