@@ -23,7 +23,7 @@
                 <span class="sr-only">支付前端常用工具集合</span> <span class="icon-bar"></span><span class="icon-bar">
                 </span><span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="tools.jsp">支付前端常用工具集合</a>
+            <a class="navbar-brand" href="index.jsp">常用工具集合</a>
         </div>
     </div>
 </div>
